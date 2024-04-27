@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "rootDir": "./src",  // TypeScriptのソースファイルが存在するディレクトリ
+    "outDir": "./dist",  // コンパイル後のJavaScriptファイルを出力するディレクトリ
+    "moduleResolution": "node"  // Node.jsスタイルのモジュール解決を使用
+  },
+  "include": [
+    "src/**/*"  // srcディレクトリ内のすべてのファイルを含む
+  ],
+  "exclude": [
+    "node_modules",  // node_modulesディレクトリを除外
+    "**/*.test.ts"  // テストファイルを除外（存在する場合）
+  ]
+}
