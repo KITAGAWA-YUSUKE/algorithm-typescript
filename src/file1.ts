@@ -1,13 +1,19 @@
 import * as readline from 'readline';
 
-// コマンドラインから数値の入力を受け取るための設定
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-rl.question('Enter a number: ', (input) => {
+rl.question('数字を入力してください: ', (input) => {
   const N: number = parseInt(input);
+
+  if (isNaN(N) || N < 2) {
+    console.log('2以上の整数を入力してください');
+    rl.close();
+    return;
+  }
+
   const Answer: number[] = [];
 
   // 素因数分解を行う
